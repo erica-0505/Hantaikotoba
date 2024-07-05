@@ -1,7 +1,6 @@
-﻿import streamlit as st
+import streamlit as st
 import numpy as np
 import pandas as pd
-
 
 st.title("はんたいことば")
 images = {
@@ -11,11 +10,11 @@ images = {
  "みじかい(短い)":"mijikai.png",
  "たかい(高い)": "takai.png",
  "ひくい(低い)":"hikui.png",
- "おもい(重い)":"omoi.png",
+ "おもい(重い)":"omoi.png", 
  "かるい(軽い)":"karui.png",
- "ふとい(太い)":"futoi.png",
+ "ふとい(太い)":"futoi.png", 
  "ほそい(細い)":"hosoi.png",
- "あつい(厚い)":"atsui.png",
+ "あつい(厚い)":"atsui.png", 
  "うすい(薄い)":"usui.png",
  "あさい(浅い)": "asai.png",
  "ふかい(深い)":"fukai.png",
@@ -73,7 +72,6 @@ images = {
  "ねる(寝る)":"neru.png"
  }
 
-
 biginner_word_pairs = {
     "おおきい(大きい)": "ちいさい(小さい)",
     "ながい(長い)": "みじかい(短い)",
@@ -114,7 +112,6 @@ advanced_words_pairs = {
     "おきる(起きる)":"ねる(寝る)"
     }
 
-
 hantaikotoba_data_set = {
   "★": biginner_word_pairs,
   "★★": intermediate_words_pairs,
@@ -129,14 +126,19 @@ if st.button("出題"):
   image = images[english_word]
   st.image(image)
 
-
   with st.expander("解答を見る"):
     japanese_word = word_pairs[english_word]
     st.write(f"## {japanese_word}")
     image2 = images[japanese_word]
     st.image(image2)
 
-
 if st.button("次の問題へ"):
   placeholder = st.empty()
   placeholder.empty()
+
+
+
+
+
+
+  
